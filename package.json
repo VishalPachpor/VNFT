@@ -1,0 +1,20 @@
+{
+  "name": "bounty",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "gautam2002 <theofficalgautam200@gmail.com>",
+  "license": "MIT",
+  "workspaces":[
+    "client",
+    "server"
+  ],
+  "private":"true",
+  "scripts": {
+    "client": "yarn workspace client start",
+    "server":"yarn workspace server start:dev",
+    "start": "concurrently \"yarn server\" \"yarn client\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
